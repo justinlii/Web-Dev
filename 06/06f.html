@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>06d</title> <!-- sets the text in the tab heading -->
+      <style> 
+        
+      </style> 
+  </head>
+  <body> 
+
+    <script> 
+     
+     const randNum = Math.random();
+     let result = '';
+     const userGuess = 'heads';
+     
+     if (randNum < 0.5){
+      result = 'heads';
+     }
+     else{
+      result = 'tails';
+     }
+     console.log(`Computer generated coinflip: ${result}`);
+
+     /*if (result == userGuess){
+      alert('You win!');
+     }
+     else{
+      alert('You lose!')
+     }*/
+
+     (result == userGuess) ? alert('You win!') : alert('You lose!')
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+

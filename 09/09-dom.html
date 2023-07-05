@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>DOM</title> <!-- sets the text in the tab heading -->
+      <style> 
+        
+      </style> 
+  </head>
+  <body> 
+    <button>hello</button>
+    <button class="js-button"> Second button</button>
+    <script> 
+    
+    console.log(document.querySelector('button'));/*this retrives the first button element and inserts into our JavaScript*/
+    console.log(document.querySelector('button').innerHTML); //retrieves the HTML inside button
+
+    //button0
+    document.querySelector('button').innerHTML = 'Button changed';
+    
+    //button1
+    console.log(document.querySelector('.js-button')); //JavaScript OBJECT
+    const buttonElement = document.querySelector('.js-button'); //add 'Element' at the end of variable name so we know that it's an HTML element stored as js object
+    console.log(buttonElement);
+
+
+    /*
+    console.log(document.title);
+    document.title = 'Lesson 9';
+
+    console.log(document.body); //This meanas we can have HTML code embedded in our JavaScript code
+    console.log(typeof document.body);
+
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = 'Changed';
+    console.log(document.body.innerHTML); //we can also replace innerHTML with HTML code instead of strings
+
+    document.body.innerHTML = '<button>Good job!</button>';*/
+
+    /*
+      document.body.innerHTML = 'hello'; //document object linked to webpage
+      document.title = 'Lesson 9';
+    */  
+    
+      
+    </script>
+  </body>
+</html>
+
+
+
+
+

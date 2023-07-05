@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>06d</title> <!-- sets the text in the tab heading -->
+      <style> 
+        
+      </style> 
+  </head>
+  <body> 
+    <button onclick="playGame('heads');"> heads </button>
+    <button onclick="playGame('tails');"> tails </button>
+    <script> 
+
+     const score = JSON.parse(localStorage.getItem('score'));/*{
+      wins: 0,
+      losses: 0
+     }*/
+
+     function playGame(userGuess){
+      const randNum = Math.random();
+      let result = '';
+      
+      if (randNum < 0.5){
+        result = 'heads';
+      }
+      else{
+        result = 'tails';
+      }
+      console.log(`Computer generated coinflip: ${result}`);
+        if (result === userGuess){
+          score.wins +=1;
+          alert(`You win! The score is now: ${score.wins} wins ${score.losses} losses`);
+        }
+        else{
+          score.losses +=1;
+          alert(`You lose! The score is now: ${score.wins} wins ${score.losses} losses`);
+        }
+        localStorage.setItem('score', JSON.stringify(score));
+      }
+     /*if (result == userGuess){
+      alert('You win!');
+     }
+     else{
+      alert('You lose!')
+     }*/
+
+     
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+

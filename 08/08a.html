@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>08a</title> <!-- sets the text in the tab heading -->
+      <style> 
+        
+      </style> 
+  </head>
+  <body> 
+
+    <script>
+      const basketball = {
+        name: 'basketball',
+        price: 2095
+      }
+
+      const spalding = {
+        name: 'basketball',
+        price: 2095
+      }
+      
+      const keyboard = {
+        name: 'Mech. keyboard',
+        price: 9000
+      }
+      console.log(basketball);
+
+      //basketball.price += 500;
+      //console.log(`Updated price: ${basketball.price}`);  
+
+      basketball.delivery = '3 days'; //to add a property to an object, simply give it a value using dot notation
+      console.log(basketball);
+
+      function comparePrice(product1, product2){
+        if (product1.price > product2.price){
+          return 'product1';
+        }
+        else if (product2.price > product1.price){
+          return 'product2';
+        }
+        else{
+          return 'equal prices';
+        }
+      }
+
+      function isSameProduct(product1, product2){
+        if ((product1.name === product2.name) && (product1.price === product2.price)){
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
+      console.log(comparePrice(basketball, keyboard));
+      console.log(isSameProduct(basketball, keyboard));
+      console.log(isSameProduct(basketball, spalding));
+
+      const str = 'Good Morning';
+      console.log(str.toLowerCase()); 
+      
+      const repeatStr = str.repeat(2);
+      console.log(repeatStr);
+    </script>
+  </body>
+</html>
+
+
+
+
+

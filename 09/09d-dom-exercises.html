@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Exercise-09d</title> <!-- sets the text in the tab heading -->
+      <style> 
+        
+      </style> 
+  </head>
+  <body> 
+    <input onkeydown="
+      enterKey(event)
+      " 
+      class="box" placeholder="Enter your name">
+    <button onclick=" 
+      displayName();
+    ">Submit</button>
+      
+    <p class="name"></p>
+
+    <script>
+      function displayName(){
+        const nameElement = document.querySelector('.name');
+        const input = document.querySelector('.box').value;
+        nameElement.innerHTML = `Your name is: ${input}`;
+      }
+
+      function enterKey(event){
+        if (event.key === 'Enter'){
+          displayName();
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+

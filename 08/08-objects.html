@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Objects</title> <!-- sets the text in the tab heading -->
+      <style> 
+        
+      </style> 
+  </head>
+  <body> 
+
+    <script>
+      /*
+      const product = {//product is now an object
+        //properties of the product object
+        name: 'socks',
+        price: 1090
+      }; 
+      console.log(product);
+      console.log(product.name); //.name accesses the name property of the product object
+      console.log(product.price);
+      product.name = 'cotton socks'; //you can modify value associated with object property
+      console.log(product); 
+
+      const product2 = {
+        name: 'shirt',
+        deliveryTime: '1 day',
+        rating: { //This is a NESTED OBJECT
+          stars: 4.5,
+          count: 87
+        },
+        func: function f1(){
+          console.log('function inside object');
+        }
+      };
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);
+      console.log(product2.deliveryTime); //syntax error, JavaScript thinks we're trying to perform subtraction
+      console.log(product2['deliveryTime']); //prints out undefined
+      console.log(product2.rating.count);
+      product2.func();
+
+      console.log(JSON.stringify(product2)); //This converts JS product2 to JSON
+      //NOTE: the function we wrote in product2 is not displayed!
+
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString)); //JSON.parse() converts JSON code into JavaScript
+
+      localStorage.setItem('message', 'hello'); 
+      //console.log(localStorage.getItem('message')); 
+      */
+
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+      console.log(3.0.toString());
+      console.log(true.toString());
+
+      const object1 = {
+        message: 'hello'
+      };
+      const object2 = object1;
+      //even though object1 was created as 'const', we are still able to change the content
+      //because object1 holds a REFERENCE, the reference/location in memory is not changed
+      // const DOES NOT prevent us from reaching into the variable and changing it
+      object1.message = 'Good job!';
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: 'Good job!'
+      };
+      console.log(object3 ===   object1); //false
+      console.log(object2 === object1); //true
+      //the REFERENCES are compared
+
+      //if you want to compare the content, you would have to do so MANUALLY
+
+      const object4 = {
+        message: 'Good job!',
+        price: 799
+      };
+      // const message = object4.message;
+
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+
+      const object5 = {
+        //message: message
+        message
+      };
+      console.log(object5);
+      </script>
+  </body>
+</html>
+
+
+
+
+

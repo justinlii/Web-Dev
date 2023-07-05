@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>DOM Projects</title> <!-- sets the text in the tab heading -->
+      <style> 
+        
+      </style> 
+  </head>
+  <body> 
+    <p> YouTube Subscribe Button </p>
+    <button class="js-subscribe" onclick=" //we want to access this button's inner HTML
+      subscribeButton();
+    ">
+      Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>A $10 shipping fee will be applied to orders under $40 </p>
+    <p>Free shipping will be applied to orders over $40</p>
+
+    <input class="js-input" 
+      placeholder ="Enter cost of order" 
+      onkeydown="//console.log(event.key)
+      enterKeyDown(event);
+      ">
+    
+    <button onclick="
+      calculate();
+    ">Calculate</button>
+
+    <p class="final-price"></p>
+
+    <script>
+
+      function enterKeyDown(event){
+        if (event.key === 'Enter'){
+          calculate(); 
+        }
+      }
+      
+      function subscribeButton(){
+        const buttonElement = document.querySelector('.js-subscribe');
+        //button object stored in a variable now
+
+        if (buttonElement.innerHTML === 'Subscribe'){
+          buttonElement.innerHTML = 'Subscribed';
+        }
+        else{
+          buttonElement.innerHTML = 'Subscribe';
+        }
+      }
+      function calculate(){
+      
+        const calcElement = document.querySelector('.js-input');
+        let cost = Number(calcElement.value); //to get the number inside the box, use input
+
+        console.log(cost);
+        const priceElement = document.querySelector('.final-price');
+
+        if (cost < 40){
+          cost = (cost*100) + 1000
+          cost /= 100;
+        }
+        priceElement.innerHTML = `$${cost}`;
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+

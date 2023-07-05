@@ -1,0 +1,43 @@
+.amazon-cart-button{
+  background-color: rgb(255, 216, 20);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none; 
+  border-radius: 15px;
+  font-family: Arial;
+  margin-left: 5px;
+}
+.uber-request{
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.uber-schedule{
+  margin-left: 15px;
+  background-color: rgb(230, 230, 230);
+  color: black;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.css-toggle{
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.css-toggled{
+  background-color: rgb(230, 230, 230);
+  color: black;
+}

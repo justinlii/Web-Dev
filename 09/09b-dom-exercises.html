@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Exercise-09c</title> <!-- sets the text in the tab heading -->
+      <style> 
+        
+      </style> 
+  </head>
+  <body> 
+    <button class="h" onclick="
+      coinFlip('heads');
+      ">heads</button>
+    <button class="t" onclick="
+      coinFlip('tails');
+    ">tails</button>
+
+    <p class="userChoice"></p>
+    <script>
+      function coinFlip(side){
+        const choiceElement = document.querySelector('.userChoice');
+        choiceElement.innerHTML = `You chose: ${side}`;
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+

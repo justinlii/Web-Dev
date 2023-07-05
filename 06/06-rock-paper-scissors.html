@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Rock Paper Scissors</title> <!-- sets the text in the tab heading -->
+      <style> 
+        
+      </style> 
+  </head>
+  <body> 
+    <p> Rock Paper Scissors</p>
+    <p>
+      <button onclick="
+        const rand = Math.random();
+        let computerMove = ''; //if statements have a scope, which limits where variables exist
+        if(rand>=0 && rand < 1/3){
+          computerMove = 'rock';
+        }
+        else if (rand>=1/3 && rand < 2/3){
+          computerMove = 'paper';
+        }
+        else{
+          computerMove = 'scissors';
+        }
+        console.log(`Computer move: ${computerMove}`);
+
+        let result = '';
+        if (computerMove === 'rock'){
+          result = 'Tie';
+        }
+        else if (computerMove === 'scissors'){
+          result = 'You win';
+        }
+        else {
+          result = 'You lose';
+        }
+        alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
+        "> Rock</button>
+        
+      <button onclick="
+        const rand = Math.random();
+        let computerMove = ''; //if statements have a scope, which limits where variables exist
+        if(rand>=0 && rand < 1/3){
+          computerMove = 'rock';
+        }
+        else if (rand>=1/3 && rand < 2/3){
+          computerMove = 'paper';
+        }
+        else{
+          computerMove = 'scissors';
+        }
+        console.log(`Computer move: ${computerMove}`);
+
+        let result = '';
+        if (computerMove === 'rock'){
+          result = 'You win.';
+        }
+        else if (computerMove === 'scissors'){
+          result = 'You lose.';
+        }
+        else {
+          result = 'Tie.';
+        }
+        alert(`You picked paper. Computer picked ${computerMove}. ${result}`);
+      "> Paper</button>
+
+      <button onclick="
+        const rand = Math.random();
+        let computerMove = ''; //if statements have a scope, which limits where variables exist
+        if(rand>=0 && rand < 1/3){
+          computerMove = 'rock';
+        }
+        else if (rand>=1/3 && rand < 2/3){
+          computerMove = 'paper';
+        }
+        else{
+          computerMove = 'scissors';
+        }
+        console.log(`Computer move: ${computerMove}`);
+
+        let result = '';
+        if (computerMove === 'rock'){
+          result = 'You lose.';
+        }
+        else if (computerMove === 'scissors'){
+          result = 'Tie.';
+        }
+        else {
+          result = 'You win.';
+        }
+        alert(`You picked scissors. Computer picked ${computerMove}. ${result}`);
+      "> Scissors</button>
+    </p>
+    <script>
+     
+    </script>
+  </body>
+</html>

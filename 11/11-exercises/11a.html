@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Excercises-11</title> <!-- sets the text in the tab heading -->
+      <style>
+
+      </style>
+  </head>
+  <body>
+    <script>
+      
+      const nums = [10, 20, 30];
+      nums[nums.length-1] = 99;
+      console.log(nums);
+
+      function getLastValue(array){
+        return array[array.length-1];
+      }
+
+      const testArr0 = [1, 20, 22, 24, 5];
+      const testArr1 = ['hi', 'hello', 'good'];
+
+      console.log(getLastValue(testArr0));
+      console.log(getLastValue(testArr1));
+
+      function arraySwap(array){
+        const temp = array[0];
+        array[0] = array[array.length-1];
+        array[array.length-1] = temp;
+
+        return array
+      }
+      
+      console.log(arraySwap(testArr0));
+      console.log(arraySwap(testArr1));
+
+      console.log(`Count by 2 from 0 to 10 - for loop`);
+      for(let i = 0; i <= 10; i+=2){
+        console.log(i);
+      }
+
+      console.log(`Count down from 5 to 0 - for loop`);
+      for(let i = 5; i >= 0; i--){
+        console.log(i);
+      }
+
+      console.log(`Count by 2 from 0 to 10 - while loop`);
+      let i = 0;
+      while (i <= 10){
+        console.log(i);
+        i+=2;
+      }
+      //console.log('we back')
+
+      console.log(`Count down from 5 to 0 - while loop`);
+      let j = 5; 
+      while (j >=0){
+        console.log(j);
+        j--;
+      }
+
+      const testArr3 = [0, 1, 2, 3, 4, 5];
+      const testArr4 = [-2, -1, 0, 99];
+      function arrAdd(array, num = 1){
+        const newArr = [];
+        for (let i = 0; i < array.length; i++){
+          newArr.push(array[i]+=num);
+        }
+        return newArr;
+      }
+      console.log(arrAdd(testArr3, 2));
+      console.log(arrAdd(testArr4, 2));
+
+      const testArr5 = [1, 1, 2];
+      const testArr6 = [1, 1, 3];
+
+      function addArrays(array1, array2){
+        const arrResult = [];
+        if (array1.length == array2.length){
+          for (let i = 0; i < array1.length; i++){
+            arrResult.push(array1[i] + array2[i]);
+          }
+        }
+        return arrResult;
+      }
+      
+      console.log(addArrays(testArr5, testArr6));
+
+      function countPositive(array){
+        let numPositive = 0;
+        for (let i = 0; i < array.length; i++){
+          if(array[i] > 0){
+            numPositive++;
+          }
+        }
+        return numPositive;
+      }
+
+      const testArray7 = [-2, 3, -5, 7, 10];
+      console.log(countPositive(testArray7));
+
+      function minMax(array){
+        const result = {
+          minimum: null,
+          maximum: null
+        }
+        for(let i = 0; i < array.length; i++){
+          if ((array[i] < result.min) || (result.min === null)){
+            result.min = values;
+          }
+
+          if ((array[i] > result.max) || (result.max === null)){
+            result.max = value;
+          }
+        }
+        return result;
+      }
+
+      const testArray8 = [1, -3, 5];
+      const testArray9 = [-2, 3, -5, 7, 10];
+      const testArray10 = [];
+      const testArray11 = [3];
+
+      function countWords(words){
+        const wordBank ={};
+        for (let i = 0; i < words.length; i++){
+          const word = words[i];
+          if (!wordBank[word]){
+            wordBank[word] = 1;
+          }
+          else{
+            wordBank[word] +=1;
+          }
+        }
+        return wordBank;
+      }
+
+      console.log(minMax(testArray8));
+      console.log(minMax(testArray9));
+      console.log(minMax(testArray10));
+      console.log(minMax(testArray11));
+    </script>
+  </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Cart Quantity</title> <!-- sets the text in the tab heading -->
+      <style> 
+        
+      </style> 
+  </head>
+  <body> 
+    <p>Cart Quantity</p>
+
+    <button onclick="console.log(`Cart Quantity: ${cartQuantity}`);">
+      Show Quantity
+    </button>
+
+    <button onclick=" 
+    updateCartQuantity(1);
+    
+    ">
+      Add to Cart
+    </button>
+
+    <button onclick=" 
+    updateCartQuantity(2);
+    
+    "> 
+      +2
+    </button>
+
+    <button onclick="
+     updateCartQuantity(3);
+     
+     ">
+      +3
+    </button>
+
+    <button onclick="
+     updateCartQuantity(4);
+     
+     ">
+      +4
+    </button>
+
+    <button onclick="
+     updateCartQuantity(5);
+     
+     ">
+      +5
+    </button>
+
+    <button onclick="
+     updateCartQuantity(-1);
+     
+     ">
+      -1
+    </button>
+
+    <button onclick="
+     updateCartQuantity(-2);
+     
+     ">
+      -2
+    </button>
+
+    <button onclick="
+      updateCartQuantity(-3);
+     ">
+      -3
+    </button>
+
+    <button onclick=" cartQuantity = 0; console.log(`Cart was rest`); console.log(`Cart Quantity: ${cartQuantity}`);"> 
+      Reset Cart
+    </button>
+
+    <p class="js-item-count">Items in cart: </p>
+
+    <script>
+      let cartQuantity = 0;
+      function updateCartQuantity(quantity){
+        const pElement = document.querySelector('.js-item-count');
+        if(quantity > 0){
+          (cartQuantity + quantity) > 10 ? alert('Exceeds cart capcity') : 
+          pElement.innerHTML = `Cart Quantity: ${cartQuantity+=quantity}`
+          
+        }
+        else if (quantity < 0){
+          Number(cartQuantity + quantity) < 0 ? alert('Not enough items in the cart') : pElement.innerHTML = `Cart Quantity: ${cartQuantity+=quantity}`
+          
+        }
+      }
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title> HTML & CSS Review</title> <!-- sets the text in the tab heading -->
+      <style> 
+        .red-button { /* This is the CSS Selector - it selects which elements to change*/
+        background-color: red;
+        color: white; /* Added a semicolon to separate properties */
+        border: none;
+        }
+        .yellow-button {
+        background-color: yellow;
+        }
+      </style> 
+  </head>
+  <body> 
+    <button title="tooltip" class="red-button" onclick="     /*We can also write javascript between the double quotes*/
+      alert('clicked');
+      ">  
+      hello 
+    </button> 
+
+    <p> 
+      paragraph of text <button class="yellow-button"> hello </button> text <!-- Added a space between elements -->
+    </p>
+
+    <script>
+      alert('hello');
+      console.log(2+2);
+      console.log('some' + 'text');
+
+      /*script elements usually go at the bottom of the body because we the webpage to be loaded first, javascript makes it interactable*/
+    </script>
+  </body>
+</html>
+
+
+
+
+
