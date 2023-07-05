@@ -25,9 +25,9 @@ function displayList(){
   let accumHTML = ``;
   for(let i = 0; i < taskList.length; i++){
     const taskElement = taskList[i];
-    const html = 
-      `
-       <p>${taskElement.input} ${taskElement.date}</p>
+    const html = `
+       <p>
+       ${taskElement.input} ${taskElement.date}
       <button onclick="taskList.splice(${i}, 1);
       displayList();
       " > Delete </button>
