@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Excercises-11</title> <!-- sets the text in the tab heading -->
+      <style>
+
+      </style>
+  </head>
+  <body>
+    <script>
+      const stringArr0 = ['hello', 'world', 'search', 'good'];
+      const stringArr1 = ['not', 'found'];
+      const stringArr2 = ['green', 'red', 'blue', 'red'];
+      const foodArr = ['egg', 'apple', 'egg', 'egg', 'ham'];
+      
+
+      function checkForString(arr, string){
+        for (let i = 0; i < arr.length; i++){
+          if (arr[i] === string){
+            console.log(i);
+            return;
+          }
+        }
+        console.log(-1);
+        return;
+      }
+
+      checkForString(stringArr0, 'search');
+      checkForString(stringArr1, 'search');
+
+      checkForString(stringArr2, 'red');
+      checkForString(stringArr2, 'yellow');
+
+      function removeEgg(foodArr){
+        const newArr = [];
+        for (let i = 0; i < foodArr.length; i++){
+          if (foodArr[i] === 'egg'){
+            continue;
+          }
+          else{
+            newArr.push(foodArr[i]);
+          }
+        }
+        return newArr;
+      }
+
+      console.log(removeEgg(foodArr));
+
+      function remove2Egg(foodArr){
+        const newArr = [];
+        let eggCounter = 0;
+        for (let i = 0; i < foodArr.length; i++){
+          if (foodArr[i] === 'egg' && eggCounter < 2){
+            eggCounter++;
+            continue;
+          }
+          else{
+            newArr.push(foodArr[i]);
+          }
+        }
+        return newArr;
+      }
+
+      console.log(remove2Egg(foodArr));
+
+      const newFoodArr = ['egg', 'apple', 'egg', 'egg', 'ham'];
+      function removeLast2Egg(foodArr){
+        const foodArrCopy = foodArr.slice();
+        console.log(`foodArrCopy: ${foodArrCopy}`);
+        const reversedArr = foodArrCopy.reverse();
+        return(remove2Egg(reversedArr).reverse());
+      }
+      
+      console.log(removeLast2Egg(newFoodArr));
+      console.log(newFoodArr);
+
+      //fizz buzz problem
+      /*for (let i = 1; i <= 20; i++){
+        if (i%3 == 0 && i%5 == 0){
+          console.log('FizzBuzz');
+        }
+        else if (i%5 == 0){
+          console.log('Buzz')
+        }
+        else if(i%3 == 0){
+          console.log('Fizz')
+        }
+        else{
+          console.log(i);
+        }
+      }
+      */
+      
+      function findIndex(arr, string){
+        for (let i = 0; i < arr.length; i++){
+          if (arr[i] === string){
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      function uniqueArr (arr){
+        const finalUniqueArr = [];
+        for (let i = 0; i < arr.length; i++){
+          if (findIndex(finalUniqueArr, arr[i]) == -1){
+            finalUniqueArr.push(arr[i]);
+          }
+        }
+        return finalUniqueArr;
+      }
+
+      const testArr0 = ['green', 'red', 'blue', 'red'];
+      const testArr1 = ['red', 'green', 'green', 'red'];
+      console.log(uniqueArr(testArr0));
+      console.log(uniqueArr(testArr1));
+    </script>
+  </body>
+</html>
+
+
+
+
+
