@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Advanced functions</title> <!-- sets the text in the tab heading -->
+      <style> 
+  
+      </style> 
+  </head>
+  <body> 
+    
+    <script>
+      function greeting(){
+        console.log('Hello');
+      }
+      //this type of function has a hositing advantage
+      //hosting - you are able to call the function before it is written and declared 
+      //hoisting doesn't work when the function is stored in a variable
+      greeting();
+
+      //Saving functions inside a variable 
+
+      const f1 = function greeting(){
+        console.log('hello2');
+      };
+
+      console.log(f1);
+      console.log(typeof f1); //function
+      //running a function stored inside a variable
+      f1();
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
