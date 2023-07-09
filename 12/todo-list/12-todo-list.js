@@ -1,20 +1,8 @@
-const taskList = JSON.parse(localStorage.getItem('todo')) || [
-  {
-    input: 'make dinner',
-    date: '2023-07-08'
-  },
-  {
-    input: 'wash dishes',
-    date: '2023-07-08'
-  }
-];
-
-displayList();
+const taskList = [];
 
 function addTodoList(){
   let inputElement = document.querySelector('.js-input');
   let input = inputElement.value;
-
   let dateElement = document.querySelector('.js-date');
   let date = dateElement.value;
 
@@ -32,8 +20,6 @@ function addTodoList(){
 
   inputElement.value = '';
   displayList();
-  updateStorage();
-
 }
 
 
@@ -51,7 +37,6 @@ function displayList(){
       class="css-delete-button" 
       onclick="
         taskList.splice(${i}, 1);
-        updateStorage();
         displayList();"
         
       > Delete </button>
@@ -65,8 +50,4 @@ function enterKeyDown(event){
   if (event.key === 'Enter'){
     addTodoList();
   }
-}
-
-function updateStorage(){
-  localStorage.setItem('todo', JSON.stringify(taskList));
 }

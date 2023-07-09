@@ -9,6 +9,7 @@
   <body> 
     
     <script>
+      /*
       function greeting(){
         console.log('Hello');
       }
@@ -18,7 +19,6 @@
       greeting();
 
       //Saving functions inside a variable 
-
       const f1 = function greeting(){
         console.log('hello2');
       };
@@ -28,6 +28,62 @@
       //running a function stored inside a variable
       f1();
 
+      //we can also save functions (value) inside objects
+      const object1 = {
+        num: 2,
+        f: function greeting(){
+          console.log('hello3');
+        }
+      };
+
+      object1.f(); //dot notation and ( ) to access and call function
+      //functions saved inside objects are called method
+      
+      function display(parameter){
+        console.log(parameter);
+      }
+
+      display(2);
+      //display(object1.f());
+
+      function run(parameter){ //passing a function into another function
+        parameter(); 
+      }
+
+      run(function() {
+        console.log('hello4');
+      });*/
+
+      //------****** SET TIMEOUT ******------
+      //runs a function at a future time
+      //first parameter is the function we want to run in the future
+      //second paramter is the delay time (in milliseconds) before running function 
+      /*setTimeout(function(){
+        console.log('timeout');
+        console.log('timeout2');
+      }, 3000); 
+      console.log('next line')
+      //asynchronous: computer does not wait for the delay, proceeds straight to next line 
+      //synchronous: computer waits for a line to finish running before proceeding
+
+      //------****** SET INTERVAL ******------
+      //will keep running a function every set amount of delay time
+      //first parameter is the function we want to run in the future
+      //second paramter is the delay time (in milliseconds) before running function 
+      setInterval(function(){
+        console.log('interval');
+      }, 3000);
+
+      console.log('next line 2');*/
+
+      const array0 = [
+        'make dinner',  
+        'wash dishes',
+        'watch youtube'
+      ]
+      array0.forEach(function(value, index){
+        console.log(`index: ${index} - ${value}`);
+      })
     </script>
   </body>
 </html>

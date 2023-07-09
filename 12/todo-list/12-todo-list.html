@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    
+    <title>Todo list</title> <!-- sets the text in the tab heading -->
+    <link 
+    rel="stylesheet"
+    href="12-todo-list.css">
+  </head>
+  <body> 
+    <p> Todo List Practice 1</p>
+
+    <div class="todo-list-input">
+      <input 
+        class="js-input css-input-box" 
+        placeholder="Add a task">
+      <input
+        type="date" 
+        class="js-date css-date-box"
+        placeholder="yyyy-mm-dd"
+        onkeydown="enterKeyDown(event);">
+      <button 
+        class="css-add-button"
+        onclick="
+        addTodoList();
+      ">Add</button>
+    </div>
+
+    <div class="js-todo-list todo-list-grid"> <!-- 'div' serves as a container (block element with no default styling / padding ), it separates buttons and paragraphs-->
+      
+    </div> 
+    <script src="12-todo-list.js">
+    </script>
+  </body>
+</html>
+
+
+
+
+
