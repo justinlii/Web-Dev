@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    
+    <title class="title">Exercise 12e</title> <!-- sets the text in the tab heading -->   
+    
+  </head>
+  <body> 
+    <button 
+      class="add-cart-button"
+      onclick="addButton()"
+    > Add to cart</button>
+    <p class="add-message"></p>
+    <script>
+
+      let timeOutID;
+      function addButton(){
+        addMessage = document.querySelector('.add-message');
+        addMessage.innerHTML = 'Added!';
+
+        clearTimeout(timeOutID);
+        timeOutID = setTimeout(function(){  
+          addMessage.innerHTML = '';
+          messageDisplayed = true;
+        }, 2000);
+        messageDisplayed = false;
+        console.log(timeOutID);
+      }
+
+      
+      
+    </script>
+  </body>    
+</html>
+
+
+
+
+

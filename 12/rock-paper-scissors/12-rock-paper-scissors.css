@@ -32,7 +32,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
-.reset, .auto-play{
+.reset, .auto-play, .js-yes-reset, .js-no-reset{
   font-family: Arial, Helvetica, sans-serif;
   padding: 8px 15px;
   cursor: pointer;

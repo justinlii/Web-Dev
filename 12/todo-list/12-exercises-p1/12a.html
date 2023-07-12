@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    
+    <title>Exercise 12a</title> <!-- sets the text in the tab heading -->
+    
+  </head>
+  <body> 
+    <button 
+      class="start-button js-start-button"> Start</button>
+    <script>
+      const add = function(){
+        console.log(2+3);
+      };
+      add();
+      add();
+
+      const runTwice = function(fun){
+        fun();
+        fun();
+      };
+
+      runTwice(function(){
+        console.log('12b');
+      });
+
+      runTwice(add);
+
+      let isClicked = false;
+      function startButton(){
+        if (isClicked === false){
+          startButton = document.querySelector('.start-button');
+          startButton.innerHTML = 'Loading...';
+          setTimeout(() =>{
+            startButton = document.querySelector('.start-button');
+            startButton.innerHTML = 'Finished!';
+          }, 1000);
+          isClicked = true;
+        }
+      }
+
+      document.querySelector('.js-start-button')
+        .addEventListener('click', ()=>{
+          startButton();
+        })
+    </script>
+  </body>
+</html>
+
+
+
+
+

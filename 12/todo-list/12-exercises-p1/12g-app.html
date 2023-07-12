@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    
+    <title class="title">App</title> <!-- sets the text in the tab heading -->   
+    
+  </head>
+  <body> 
+    <button
+      class="add-button"
+      onclick="increaseMessages()">
+      Add message
+    </button>
+    <button
+      class="remove-button"
+      onclick="decreaseMessages()">
+      Remove message
+    </button>
+    <p class="add-message"></p>
+    <script>
+      let numMessages = 2;
+
+      let intervalID; 
+      intervalID = setInterval(function(){
+        titleElement = document.querySelector('.title');
+        if (titleElement.innerHTML === 'Exercise 12e'){
+          titleElement.innerHTML = `(${numMessages}) New Messages`
+        }
+        else{
+          titleElement.innerHTML = 'Exercise 12e';
+        }
+      }, 1000)
+
+      function increaseMessages(){
+        if (numMessages === 0){
+          numMessages+=1;
+          intervalID = setInterval(function(){
+            if (titleElement.innerHTML === 'App'){
+              titleElement.innerHTML =`(${numMessages}) New Messages`
+            }
+            else{
+              titleElement.innerHTML = 'App';
+            }
+          }, 1000);
+        }
+        else{
+          numMessages+=1;
+        }
+      }
+
+      function decreaseMessages(){
+        if(numMessages > 0){
+          numMessages--;
+        }
+        if (numMessages == 0){
+          clearInterval(intervalID);
+          titleElement = document.querySelector('.title');
+          titleElement.innerHTML = 'App'
+        }
+      }
+    </script>
+  </body>    
+</html>
+
+
+
+
+
